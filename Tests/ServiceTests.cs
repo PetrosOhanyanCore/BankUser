@@ -19,7 +19,7 @@ public class ServiceTests
         _service = new BankService(_mockRepo.Object);
 
         _account = new Account(500);
-        _user = new User { Name = "Petros", Accounts = new List<Account> { _account } };
+        _user = new User { Name = "Some name", Accounts = new List<Account> { _account } };
 
         _mockRepo.Setup(r => r.GetUser(It.IsAny<Guid>())).Returns(_user);
     }
